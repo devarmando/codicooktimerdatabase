@@ -25,7 +25,7 @@ SECRET_KEY = '37q1gj861fcryksia5raj@%p-vj0re5rlf3tw30l_(4eooh(6@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['codicooktimerdatabase.herokuapp.com']
 
 
 
