@@ -17,6 +17,13 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
 from TestingController.views import RecipeViewSet,RoleViewSet,PrivilegeViewSet,TagViewSet,ProfileViewSet,UserViewSet
+from rest_framework import renderers
+
+
+IsUser = UserViewSet.as_view({
+    'get': 'IsUser',
+    'post': 'create'
+})
 
 router = routers.DefaultRouter()
 router.register(r'RecipesIndex',RecipeViewSet, base_name='a')
