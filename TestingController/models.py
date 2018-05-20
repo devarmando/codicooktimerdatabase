@@ -3,8 +3,9 @@ from django.db import models
 class Recipe(models.Model):
     Titulo = models.CharField(max_length = 64)
     Descripcion = models.CharField(max_length = 300)
-    Pasos = models.CharField(max_length = 300)
+    Ingredientes = models.CharField(max_length = 300)
     Instrucciones = models.CharField(max_length = 300)
+    UserId = models.CharField(max_length = 10)
     IMG0 = models.CharField(max_length = 64)
     IMG1 = models.CharField(max_length = 64)
     IMG2 = models.CharField(max_length = 64)
