@@ -46,7 +46,21 @@ class UserViewSet(ModelViewSet):
         serializer = UserSerializer(queryset, many=True) 
         return Response(serializer.data)
         
-
+    @action(detail=False)
+    def UserRecipes(self, request):
+        queryset = Recipe.objects.filter()
+    
+        U = self.request.query_params.get('x', None)
+        U = U.split("[AND]")
+        
+        print (U)
+        if (U is not None):
+            queryset = queryset.filter(UserId=U[0])
+            serializer = RecipeSerializer(queryset, many=True)
+            
+        queryset = queryset.filter(UserId=U[0])
+        serializer = RecipeSerializer(queryset, many=True) 
+        return Response(serializer.data)
             
    
 

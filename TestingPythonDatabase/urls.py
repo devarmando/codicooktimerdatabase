@@ -22,6 +22,7 @@ from rest_framework import renderers
 
 IsUser = UserViewSet.as_view({
     'get': 'IsUser',
+    'get': 'UserRecipes',
     'post': 'create'
 })
 
